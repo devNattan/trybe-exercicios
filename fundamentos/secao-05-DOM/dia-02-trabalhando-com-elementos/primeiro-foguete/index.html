@@ -26,6 +26,10 @@
     const pai = elementoOndeVoceEsta.parentElement;
     //mudando a cor do pai
     pai.style.color='red'
+    //pegando o elemento irmão
+    const filhoDoFilho = elementoOndeVoceEsta.firstElementChild;
+    //dando texto do filho do filho
+    filhoDoFilho.innerHTML = 'olá'
   </script>
 </body>
 </html>
