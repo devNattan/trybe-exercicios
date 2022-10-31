@@ -26,5 +26,8 @@
         // mudando a cor do pai do elemento
         let pai = elementoOndeVoceEsta.parentElement;
         pai.style.color = 'red';
+        // acessando o filho do filho
+        let primeiroFilhoDoFilho = pai.firstElementChild;
+        primeiroFilhoDoFilho.innerHTML  = 'Hello World!!!'
     </script>
 </html>
