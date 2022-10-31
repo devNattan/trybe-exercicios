@@ -55,19 +55,26 @@
       6. Crie e execute uma função que exiba o conteúdo de todas as tags <p> no console.
       */
         
-        //  exercicio 1
+        //  exercicio 1 mudando o texto
         let changeText = () => {
-            let paragraph = document.getElementsByTagName('p')[1];
+            let paragraph = document.querySelectorAll('p')[1];
             paragraph.innerHTML = "Está trabalhando remotamente no Canadá"
         }
         changeText()
 
-        // exercicio 2
+        // exercicio 2 mudando a cor
         let changeColor = () => {
-            let mainContent = document.getElementsByClassName('main-content')[0];
+            let mainContent = document.querySelector('.main-content');
             mainContent.style.backgroundColor = 'green'
         }
         changeColor()
+
+        // exercicio 3 mudando a cor mais uma vez
+        let changeColor2 = () => {
+            let mainContent = document.querySelector('.center-content');
+            mainContent.style.backgroundColor = 'white'
+        }
+        changeColor2()
     </script>
   </body>
 </html>
