@@ -25,9 +25,14 @@
         let irmaoElemento = document.createElement('section');
         irmaoElemento.id = 'irmaoElemento';
         pai.appendChild(irmaoElemento);
-        console.log(pai)
+        // console.log(pai)
 
-        // 
+        //criando filho para o elemento
+        let elementoOndeVoceEsta = document.querySelector('#elementoOndeVoceEsta');
+        let filhoElemento = document.createElement('div');
+        filhoElemento.id = 'filhoElemento';
+        elementoOndeVoceEsta.appendChild(filhoElemento);
+        console.log(elementoOndeVoceEsta)
       </script>
 </body>
 </html>
