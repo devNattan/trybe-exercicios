@@ -37,6 +37,9 @@
         console.log(textoAtencao)
         // acessando terceiro filho
         let terceiroFilho = elementoOndeVoceEsta.nextElementSibling;
-        console.log(terceiroFilho)
+        console.log(terceiroFilho);
+        // acessando o terceiro filho via pai
+        let terceiroFilho2 = pai.lastElementChild.previousElementSibling;
+        console.log(terceiroFilho2)
     </script>
 </html>
