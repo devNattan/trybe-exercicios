@@ -27,7 +27,10 @@
         let pai = elementoOndeVoceEsta.parentElement;
         pai.style.color = 'red';
         // acessando o filho do filho
-        let primeiroFilhoDoFilho = pai.firstElementChild;
-        primeiroFilhoDoFilho.innerHTML  = 'Hello World!!!'
+        let primeiroFilhoDoFilho = elementoOndeVoceEsta.firstElementChild;
+        primeiroFilhoDoFilho.innerHTML  = 'Hello World!!!';
+        // acessando o filho
+        let primeiroFilho = pai.firstElementChild;
+        console.log(primeiroFilho)
     </script>
 </html>
