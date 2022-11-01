@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscando Elementos</title>
+</head>
+<body>
+    <main id="paiDoPai">
+        <section id="pai">
+          <section id="primeiroFilho"></section>
+          <section id="elementoOndeVoceEsta">
+            <section id="primeiroFilhoDoFilho"></section>
+            <section id="segundoEUltimoFilhoDoFilho"></section>
+          </section>
+          Atenção!
+          <section id="terceiroFilho"></section>
+          <section id="quartoEUltimoFilho"></section>
+        </section>
+      </main>
+</body>
+    <script>
+        // acessando o elemento
+        let elementoOndeVoceEsta = document.querySelector('#elementoOndeVoceEsta');
+        // mudando a cor do pai do elemento
+        let pai = elementoOndeVoceEsta.parentElement;
+        pai.style.color = 'red';
+        // acessando o filho do filho
+        let primeiroFilhoDoFilho = elementoOndeVoceEsta.firstElementChild;
+        primeiroFilhoDoFilho.innerHTML  = 'Hello World!!!';
+        // acessando o filho
+        let primeiroFilho = pai.firstElementChild;
+        console.log(primeiroFilho)
+        // acessando atenção via elemento onde vc esta
+        let textoAtencao = elementoOndeVoceEsta.nextSibling;
+        console.log(textoAtencao)
+        // acessando terceiro filho
+        let terceiroFilho = elementoOndeVoceEsta.nextElementSibling;
+        console.log(terceiroFilho);
+        // acessando o terceiro filho via pai
+        let terceiroFilho2 = pai.lastElementChild.previousElementSibling;
+        console.log(terceiroFilho2)
+    </script>
+</html>

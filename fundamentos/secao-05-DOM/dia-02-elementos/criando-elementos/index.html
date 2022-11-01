@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criando elementos via js</title>
+</head>
+<body>
+    <main id="paiDoPai">
+        <section id="pai">
+          <section id="primeiroFilho"></section>
+          <section id="elementoOndeVoceEsta">
+            <section id="primeiroFilhoDoFilho"></section>
+            <section id="segundoEUltimoFilhoDoFilho"></section>
+          </section>
+          Atenção!
+          <section id="terceiroFilho"></section>
+          <section id="quartoEUltimoFilho"></section>
+        </section>
+      </main>
+      <script>
+        //criando irmão para o elementoOndeVoceEsta
+        let pai = document.querySelector('#pai');
+        let irmaoElemento = document.createElement('section');
+        irmaoElemento.id = 'irmaoElemento';
+        pai.appendChild(irmaoElemento);
+        // console.log(pai)
+
+        //criando filho para o elemento
+        let elementoOndeVoceEsta = document.querySelector('#elementoOndeVoceEsta');
+        let filhoElemento = document.createElement('div');
+        filhoElemento.id = 'filhoElemento';
+        elementoOndeVoceEsta.appendChild(filhoElemento);
+        // console.log(elementoOndeVoceEsta)
+
+        // criando filho para o primeiro filho do filho
+        let primeiroFilhoDoFilho = document.querySelector('#primeiroFilhoDoFilho');
+        let elementoFilho = document.createElement('div');
+        elementoFilho.id = 'elementoFilho'
+        primeiroFilhoDoFilho.appendChild(elementoFilho);
+        // console.log(primeiroFilhoDoFilho)
+
+        // acessando terceiro filho via elemento que foi criado
+        let terceiroFilho = elementoFilho.parentElement.parentElement.nextElementSibling
+        console.log(terceiroFilho);
+      </script>
+</body>
+</html>

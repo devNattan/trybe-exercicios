@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <script>
+// func que cria elemento novo com classe
+    
+const criaElemento = (elementName, elementClass) => {
+        newElement = document.createElement(elementName);
+        newElement.className = elementClass
+        return newElement
+    }
+
+// EXERCICIO 1
+    
+    //capturando o body
+    let body = document.querySelector('body') 
+    // criando novo elemento
+    criaElemento('h1', 'texto-principal')
+    // adicionando texto
+    newElement.innerText = 'Exercícios JavaScript DOM'
+    // adicionando ao body
+    body.appendChild(newElement)
+
+// EXERCICIO 2
+
+    // criando elemento novo
+    criaElemento('main', 'main-content')
+    // adiciona ao body
+    body.appendChild(newElement)
+
+// EXERCICIO 3
+
+    // capturando main-content
+    let mainContent = document.querySelector('.main-content')
+    // criando section main
+    criaElemento('section', 'center-content')
+    // adicionando como filho da main
+    mainContent.appendChild(newElement)
+
+// EXERCICIO 4
+
+    // capturando center-content
+    let centerContent = document.querySelector('.center-content')
+    // criando p
+    criaElemento('p', 'paragrafo')
+    // alterando texto do p
+    newElement.innerText = 'Algum texto aqui'
+    // adicionando como filho da section center-content
+    centerContent.appendChild(newElement)
+    </script>
+  </body>
+</html>
