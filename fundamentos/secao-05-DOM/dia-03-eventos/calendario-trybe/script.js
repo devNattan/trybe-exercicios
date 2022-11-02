@@ -85,6 +85,27 @@ let criaBotao2 = (string) => {
   containerDeBotoes.appendChild(botao)
 }
 
-criaBotao('Sexta-feira')
+criaBotao2('Sexta-feira');
 
 //mostrando os dias de sexta
+
+
+ 
+  let mostraSexta = () => {
+  let diaSexta = document.querySelectorAll('.friday');
+  let botaoSexta = document.querySelector('#btn-friday');
+  let backgroundColor = 'rgb(238,238,238)';
+  let setNewColor = 'white';
+
+  botaoSexta.addEventListener('click', () => {
+    for(i = 0; i < diaSexta.length; i++) {
+      if (diaSexta[i].style.backgroundColor === setNewColor){
+        diaSexta[i].style.backgroundColor = backgroundColor
+      } else {
+        diaSexta[i].style.backgroundColor = setNewColor
+      }
+    }
+  })
+}
+
+mostraSexta();
