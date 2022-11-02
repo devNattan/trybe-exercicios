@@ -75,3 +75,16 @@ let mostraFeriado = () => {
 }
 
 mostraFeriado();
+
+//botão da sexta 
+let criaBotao2 = (string) => {
+  const containerDeBotoes = document.querySelector('.buttons-container');
+  let botao = document.createElement('button');
+  botao.innerHTML = string;
+  botao.id = 'btn-friday'
+  containerDeBotoes.appendChild(botao)
+}
+
+criaBotao('Sexta-feira')
+
+//mostrando os dias de sexta
