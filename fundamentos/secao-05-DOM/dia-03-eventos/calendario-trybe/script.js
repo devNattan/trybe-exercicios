@@ -55,3 +55,23 @@ let criaBotao = (string) => {
 
 criaBotao('Feriados')
 
+// botão que mostra os feriados
+
+let mostraFeriado = () => {
+  let feriados = document.querySelectorAll('.holiday');
+  let botaoFeriados = document.querySelector('#btn-holiday');
+  let backgroundColor = 'rgb(238,238,238)';
+  let setNewColor = 'white';
+
+  botaoFeriados.addEventListener('click', () => {
+    for(i = 0; i < feriados.length; i++) {
+      if (feriados[i].style.backgroundColor === setNewColor){
+        feriados[i].style.backgroundColor = backgroundColor
+      } else {
+        feriados[i].style.backgroundColor = setNewColor
+      }
+    }
+  })
+}
+
+mostraFeriado();
