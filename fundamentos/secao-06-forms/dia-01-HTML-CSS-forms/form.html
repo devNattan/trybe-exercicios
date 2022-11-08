@@ -13,11 +13,11 @@
     <fieldset>
         <form action="" method="get">
             <label for="name">Nome: </label>
-            <input type="text" name="name" id="name" placeholder="Escreva seu nome aqui">
+            <input type="text" name="name" id="name" minlength="10" maxlength="40" placeholder="Escreva seu nome aqui">
             <br>
             <br>            
             <label for="email">Email: </label>
-            <input type="text" name="email" id="email" placeholder="Escreva seu email aqui">
+            <input type="text" name="email" id="email" minlength="10" maxlength="50" placeholder="Escreva seu email aqui">
             <br>
             <br>
             <h3>Destino preferido</h3>
@@ -31,9 +31,10 @@
             <label for="destino-2">Deserto</label>
             <br>
             <h3>Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</h3>
-            <textarea name="motivos" id="area-de-texto" cols="30" rows="10" placeholder="Digite aqui sua resposta"></textarea>
+            <textarea name="motivos" id="area-de-texto" maxlength="500" cols="30" rows="10" placeholder="Digite aqui sua resposta"></textarea>
             <br>
             <br>
+            <h3>Qual a melhor data para sua viagem ?</h3>
             <label for="date">Data:</label>
             <input type="text" placeholder="dd/mm/aa">
             <br>
@@ -47,6 +48,8 @@
             <br>
             <button type="submit">Enviar</button>
         </form>
+        <br>
+        <button>Limpa tudo</button>
     </fieldset>
 </body>
 </html>
