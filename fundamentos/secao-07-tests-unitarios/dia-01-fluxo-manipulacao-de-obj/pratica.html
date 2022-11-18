@@ -16,17 +16,19 @@
   <p id='result'></p>
   <script>
     
-    const verificaNumero = (value1, value2) => {
-        if(!value1 || !value2) {
-            throw new Error('preencha os camos para realizar a soma')
+// função que verifica se os inputs são validos
+    const verificaNumero = () => {
+        const num1 = document.getElementById('value1').value;
+        const num2 = document.getElementById('value2').value;
+        
+        if (!num1 || !num2) {
+            throw new Error('Preencha os campos para realizar a soma')
         }
-        if(isNaN(value1) || isNaN(value2)){
-            throw new Error('iInforme dois numeros para realizar a soma')
+        if(isNaN (num1) || isNaN (num2)) {
+            throw new Error('insira apenas numeros')
         }
     }
-    
-    
-    
+
     function sum() {
       const value1 = document.getElementById('value1').value;
       const value2 = document.getElementById('value2').value;
