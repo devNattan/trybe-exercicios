@@ -17,25 +17,35 @@
   <script>
     
 // função que verifica se os inputs são validos
-    const verificaNumero = () => {
-        const num1 = document.getElementById('value1').value;
-        const num2 = document.getElementById('value2').value;
+    const verificaPreenchido = () => {
+        let num1 = document.getElementById('value1').value;
+        let num2 = document.getElementById('value2').value;
         
         if (!num1 || !num2) {
             throw new Error('Preencha os campos para realizar a soma')
         }
-        if(isNaN (num1) || isNaN (num2)) {
+    } 
+    
+    const verificaNumero = () => {
+        let num1 = document.getElementById('value1').value;
+        let num2 = document.getElementById('value2').value;
+        if(isNaN(num1) || isNaN(num2)) {
             throw new Error('insira apenas numeros')
         }
     }
 
     function sum() {
-      const value1 = document.getElementById('value1').value;
-      const value2 = document.getElementById('value2').value;
-      const result = Number(value1) + Number(value2);
-      document.getElementById('result').innerHTML = `Resultado: ${result}`;
-      document.getElementById('value1').value = '';
-      document.getElementById('value2').value = '';
+    try{
+        let value1 = document.getElementById('value1').value;
+        let value2 = document.getElementById('value2').value;
+        verificaNumero(value1, value2)
+        verificaPreenchido(value1, value2)
+        const result = Number(value1) + Number(value2);
+        document.getElementById('result').innerHTML = `Resultado: ${result}`;
+    } catch (erro) {
+        document.getElementById('result').innerHTML = `Erro: ${erro.message}`;
+    }
+    
     }
     window.onload = () => {
       const button = document.getElementById('button');
