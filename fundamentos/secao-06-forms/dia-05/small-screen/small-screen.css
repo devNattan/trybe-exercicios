@@ -28,14 +28,32 @@
   section {
   }
   figure {
-      margin: 0;
+    
   }
   figcaption {
     font-size: .8em;
   }
 
-  @media screen and(max-width: 600px) {
-    article{
-        
+  @media screen and (min-width: 768px) {
+    body {
+        background-color: green;
+        font-size: 25px;
+        margin: 25px 3%;
+    }
+    figure {
+        width: 45%;
+        margin-right: 4.5%;
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    body {
+      background: rgba(0,255,0,.2);
+      margin: 25px 10%;
+      max-width: 1130px;
+    }
+    figure {
+      width: 30%;
+      margin-right: 2.5%;
     }
   }
