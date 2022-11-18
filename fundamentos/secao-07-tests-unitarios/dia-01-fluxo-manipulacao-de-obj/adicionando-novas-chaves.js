@@ -28,3 +28,10 @@ const customer = {
   // chamando a função para adicionar chaves e valores novas nos elementos  
   adicionaPropriedade(customer, newKey, fullName);
   console.log(customer);
+
+//   hora da prática !!!
+newKey = 'Email'
+value = 'n11001000.11@gmail.com'
+// chamando a func de adicionar chaves e valores
+adicionaPropriedade(customer, newKey, value);
+  console.log(customer);
