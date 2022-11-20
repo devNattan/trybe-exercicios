@@ -36,6 +36,14 @@ const order = {
   
   const customerInfo = (order) => {
     // Adicione abaixo as informações necessárias.
+    let address = 'address';
+    let deliveryPerson = order.order.delivery.deliveryPerson;
+    let customerName = order['name'];
+    let customerPhone = order['phoneNumber'];
+    let street = order[address].street;
+    let number = order[address].number;
+    let apartment = order[address].apartment;
+    
   
   };
   
