@@ -43,8 +43,8 @@ const order = {
     let street = order[address].street;
     let number = order[address].number;
     let apartment = order[address].apartment;
-    
-  
+
+    console.log(`Olá ${deliveryPerson}, entrega para: ${customerName}, Telefone: ${customerPhone}, R. ${street}, N: ${number}, AP: ${apartment}`)
   };
   
   customerInfo(order);
