@@ -16,4 +16,7 @@ describe('testa se printMessage é uma função', () => {
     it('testa se a função imprime', () => {
         expect(printMessage(info)).toMatch('Boas vindas');
     });
+    it('testa se a resposta contem o nome do personagem', () => {
+        expect(printMessage(info)).toMatch(info.personagem);
+    })
 });
