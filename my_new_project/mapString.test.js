@@ -18,5 +18,11 @@ describe('testa se as funções encode e decode funcionam', () => {
     });
     test('testa se decode retorna o resultado esperado', () => {
         expect(decode('12345')).toEqual('aeiou');
-    })
+    });
+    test('testa a quantidade de caracteres retornados', () => {
+        expect(encode('aeiou').length).toEqual(5);
+    });
+    test('testa a quantidade de caracteres retornados', () => {
+        expect(decode('aeiou').length).toEqual(5);
+    });
 });
