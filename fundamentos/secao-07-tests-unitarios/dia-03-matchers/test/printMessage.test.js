@@ -20,3 +20,7 @@ describe('testa se printMessage é uma função', () => {
         expect(printMessage(info)).toMatch(info.personagem);
     })
 });
+
+describe('teste de exceção da função', () => {
+    expect(() => printMessage(1)).toThrow('objeto inválido');
+});
