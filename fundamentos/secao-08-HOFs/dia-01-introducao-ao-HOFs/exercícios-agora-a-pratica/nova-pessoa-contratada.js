@@ -13,3 +13,4 @@ const newEmployees = (employeeGenerator) => {
   };
 
 //   console.log(employeeGenerator('Pedro Guerra'));
+console.log(newEmployees(employeeGenerator));
