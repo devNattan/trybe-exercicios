@@ -12,4 +12,4 @@ const newEmployees = (employeeGenerator) => {
     return {nomeCompleto, email: `${email}@trybe.com`};
   };
 
-  console.log(employeeGenerator('Pedro Guerra'));
+//   console.log(employeeGenerator('Pedro Guerra'));
