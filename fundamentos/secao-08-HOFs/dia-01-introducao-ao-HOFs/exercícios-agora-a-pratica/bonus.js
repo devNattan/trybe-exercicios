@@ -29,4 +29,32 @@ const dragonAttack = (dragon) => {
     return dragonDamg
 };
 console.log(dragonAttack(dragon));
+
 // parte 2
+const warriorAttack = (warrior) => {
+    const minDmg = warrior.strength;
+    const maxDmg = Math.floor(Math.random() *(minDmg * warrior.weaponDmg));
+
+    const warriorDamg = maxDmg > minDmg ? maxDmg : minDmg;
+    return warriorDamg
+};
+console.log(warriorAttack(warrior));
+
+// parte 3
+const mageAttack = (mage) => {
+    const mageMana = mage.mana;
+    const minDmg = mage.intelligence;
+    const maxDmg = minDmg * 2;
+    const turnStats = {
+      manaSpent: 0,
+      damageDealt: 'Not enough mana...',
+    };
+  
+    if (mageMana > 15) {
+      const mageDmg = minDmg < maxDmg ? maxDmg : minDmg;
+      turnStats.manaSpent = 15;
+      turnStats.damageDealt = mageDamage;
+      return turnStats;
+    }
+    return turnStats;
+  };
