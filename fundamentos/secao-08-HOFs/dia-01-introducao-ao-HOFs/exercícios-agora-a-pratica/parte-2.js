@@ -68,3 +68,16 @@ const authorBornIn1947 = () => {
     return books.find((book) => book.author.birthYear === 1947).author.name;
 };
 console.log(authorBornIn1947());
+
+// Retorne o nome do livro de menor nome.
+const smallerName = () => {
+    let nameBook;
+    // escreva aqui o seu código
+    books.forEach((book) => {
+      if (!nameBook || book.name.length < nameBook.length) {
+        nameBook = book.name;
+      };
+    });
+    return nameBook;
+};
+console.log(smallerName());
