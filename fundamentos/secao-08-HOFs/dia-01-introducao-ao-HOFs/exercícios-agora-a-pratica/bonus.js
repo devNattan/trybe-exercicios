@@ -42,19 +42,21 @@ console.log(warriorAttack(warrior));
 
 // parte 3
 const mageAttack = (mage) => {
-    const mageMana = mage.mana;
-    const minDmg = mage.intelligence;
-    const maxDmg = minDmg * 2;
-    const turnStats = {
-      manaSpent: 0,
-      damageDealt: 'Not enough mana...',
-    };
+  const mageMana = mage.mana;
+  const minDmg = mage.intelligence;
+  const maxDmg = minDmg * 2;
   
-    if (mageMana > 15) {
-      const mageDmg = minDmg < maxDmg ? maxDmg : minDmg;
-      turnStats.manaSpent = 15;
-      turnStats.damageDealt = mageDamage;
-      return turnStats;
-    }
-    return turnStats;
+  const turnStats = {
+    manaSpent: 0,
+    damageDealt: 'Not enough mana...',
   };
+
+  if (mageMana > 15) {
+    const mageDmg = maxDmg > minDmg ? maxDmg : minDmg;
+    turnStats.manaSpent = 15;
+    turnStats.damageDealt = mageDmg;
+    return turnStats;
+  }
+  return turnStats;
+};
+console.log(mageAttack(mage));
