@@ -60,7 +60,11 @@ const books = [
       releaseYear: 1928,
     },
   ];
-// Filtre todos os objetos do gênero ficção científica ou fantasia.
-// Adicione o código do exercício aqui:
-const filteredBooks = books.filter((book) => book.genre === 'Ficção Científica' || book.genre === 'Fantasia');
-console.log(filteredBooks);
+/* Filtre os livros com mais de 60 anos desde sua publicação 
+ e ordene a partir do livro mais velho para o mais novo.*/
+
+const olderBooks = () => {
+    const currYear = 2022;
+    return books.filter((book) => (currYear - book.releaseYear) >= 60).sort((bookA, bookB) => bookA.releaseYear - bookB.releaseYear);
+};
+console.log(olderBooks());
